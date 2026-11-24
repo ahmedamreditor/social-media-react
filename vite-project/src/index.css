@@ -1,0 +1,212 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #f3f4f6;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding: 18px;
+  background: #1e293b;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  color: #38bdf8;
+}
+
+.navbar button {
+  background: #ef4444;
+  color: white;
+}
+
+/* Main pages */
+#root > div {
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #1e293b;
+  margin: 30px 0;
+}
+
+h2,
+h3,
+h4 {
+  color: #1e293b;
+}
+
+p {
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* Buttons */
+button {
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  opacity: 0.85;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Login & Register */
+.auth-container {
+  width: min(400px, 90%);
+  margin: 50px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.auth-container h1 {
+  margin-top: 0;
+}
+
+.auth-container p {
+  margin-top: 15px;
+}
+
+/* Home */
+.create-post-btn {
+  background: #16a34a;
+}
+
+body:has(.create-post-btn) {
+  background: #f3f4f6;
+}
+
+/* Post cards */
+#root > div > div {
+  margin: 20px auto;
+}
+
+#root > div > div:has(> h3) {
+  width: min(600px, 92%);
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+#root > div > div:has(> h3) h3 {
+  margin-top: 0;
+}
+
+#root > div > div:has(> h3) button {
+  margin: 5px;
+}
+
+#root > div > div:has(> h3) a {
+  display: inline-block;
+  margin: 10px;
+  color: #2563eb;
+  text-decoration: none;
+}
+
+/* Post details */
+hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 25px 0;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .navbar {
+    gap: 12px;
+    padding: 14px 8px;
+    flex-wrap: wrap;
+  }
+
+  .navbar a {
+    font-size: 14px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  .auth-container {
+    padding: 20px;
+  }
+}
+.auth-container select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+}
+
+.error-message {
+  color: #dc2626;
+}
